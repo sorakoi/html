@@ -1,0 +1,27 @@
+#title1{
+	color: lightblue;
+}
+.hao1{
+	width: 600px;
+	height: 400px;
+	border: 1px solid lightblue;
+	position: relative;
+	left:20%;
+}
+.hao2{
+	width: 600px;
+	height: 50px;
+	background-color: lightblue;
+}
+a{
+	text-decoration: none;
+}
+.fff{
+	color: blue;
+	display: inline-block;
+	width: 115px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	vertical-align: middle;
+}
