@@ -4,18 +4,90 @@
 	<meta charset="UTF-8">
 	<title>碧蓝航线_即时PVP海上战斗_bilibili游戏</title>
 	<link rel="icon" href="https://static.hdslb.com/images/favicon.ico">
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="style_bl.css">
 </head>
 <body>
 	<center><h1 id="title1">碧蓝航线</h1></center>
+	<div id="login"><p id="account">账号未登录！</p>
+<button type="button" onclick="login()">登录账号</button>
+</div>
+	<div id="pic" class="img">
+		<img src="./img/part1s.png">
+		<img class="hidden" src="./img/part2.png">
+		<img class="hidden" src="./img/part3.png">
+		<img class="hidden" src="./img/part5.png">
+		<img class="hidden" src="./img/part4.png">
+	</div>
 	<div class="hao1">
-		<div class="hao2">
-			<a class="fff" href="">动态</a>
-			<a class="fff" href="">公告</a>
-			<a class="fff" href="">社区</a>
-			<a class="fff" href="">充值</a>
-			<a class="fff" href="">大会员</a>
+		<div id="hao2" class="hao2">
+			<a class="fffp" href="" onmouseover="hanshu(0)">动态</a>
+			<a class="fff" href="" onmouseover="hanshu(1)">公告</a>
+			<a class="fff" href="" onmouseover="hanshu(2)">社区</a>
+			<a class="fff" href="" onmouseover="hanshu(3)">充值</a>
+			<a class="fff" href="" onmouseover="hanshu(4)">大会员</a>
+		</div>
+		<div id="contents" class="links">
+		<div class="show">
+			<a class="link2" href="">我们积极响应扫黄打非，对游戏中涉及不良内容我们积极整改！</a>
+			<a class="link2" href="">碧蓝航线APP恢复上架公告！感谢支持~</a>
+			<a class="link2" href="">碧蓝航线客户端全网下架，已安装用户不影响使用。</a>
+			<a class="link2" href="">碧蓝航线3月18日服务器维护公告！</a>
+		</div>
+		<div class="hidden">			
+			<a class="link2" href="">2月23日活动更新</a>
+			<a class="link2" href="">碧蓝航线维护公告</a>
+			<a class="link2" href="">1月27日活动更新</a>
+			<a class="link2" href="">碧蓝航线1月13日服务器维护公告！</a>
+		</div>
+		<div class="hidden">
+			<a class="link2" href="">社区：碧蓝航线</a>
+			<a class="link2" href="">维护中！</a>
+			<a class="link2" href="">维护中！</a>
+			<a class="link2" href="">维护中！</a>
+		</div>
+		<div class="hidden">
+			<a class="link2" href="">充值月卡</a>
+			<a class="link2" href="">购买新春礼包</a>
+			<a class="link2" href="">购买300个钻石</a>
+			<a class="link2" href="">购买9800个钻石</a>
+		</div>
+		<div class="hidden">
+			<a class="link2" href="">大会员权益</a>
+			<a class="link2" href="">大会员游戏礼包</a>
+			<a class="link2" href="">开通记录</a>
+			<a class="link2" href="">立即购买大会员！</a>
 		</div>
 	</div>
+	</div>
+	    <script type="text/javascript">
+        function hanshu(n){
+			var pages=document.getElementById("contents").getElementsByTagName("div");
+			var tab=document.getElementById("hao2").getElementsByTagName("a");
+			var tupian=document.getElementById("pic").getElementsByTagName("img")
+			   for(var i=0;i<5;i++){
+                if(i==n){
+                    pages[i].className="show";
+                    tab[i].className="fffp";
+                    tupian[i].className="show";
+                }else{
+                	pages[i].className="hidden";
+                	tab[i].className="fff";
+                	tupian[i].className="hidden";
+                }
+		}}
+		function login()
+		{
+			var info;
+			var user = window.prompt("请输入用户名","标枪");
+			if (user == null || user==""){
+				info="账号未登录！"
+			}
+			else{
+				info="欢迎你，"+user+"! LV90";
+			}
+			document.getElementById("login").innerHTML=info;
+		}
+	</script>
+	<div id="footer">©晴海大学版权部 All Rights Reserved. 碧蓝航线公式/Bilibili lnc.</div>
 </body>
 </html>
